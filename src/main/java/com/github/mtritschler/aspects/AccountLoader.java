@@ -23,7 +23,7 @@ public class AccountLoader {
     public void refresh() {
         LOGGER.info("Refreshing accounts");
         // Uncommenting the following line will let the calls terminate
-        bank.getAccounts("sync");
+        // bank.getAccounts("sync");
         try {
             executorService.submit(() -> {
                 bank.getAccounts("async");
