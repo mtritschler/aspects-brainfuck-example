@@ -13,9 +13,8 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class AccountLoader {
 
-    private static final int NUM_THREADS = 4;
     private static final Logger LOGGER = LoggerFactory.getLogger(AccountLoader.class);
-    private final ExecutorService executorService = Executors.newFixedThreadPool(NUM_THREADS);
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     @Autowired
     private Bank bank;
